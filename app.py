@@ -32,7 +32,25 @@ button[kind="header"] {display: none;}
 
 BASE_DIR = Path(__file__).parent
 
+# 🔐 LOGIN SIMPLES
+def check_login():
+    if "autenticado" not in st.session_state:
+        st.session_state.autenticado = False
 
+    if not st.session_state.autenticado:
+        st.title("🔒 Acesso restrito")
+
+        senha = st.text_input("Digite a senha", type="password")
+
+        if senha == "1234":  # 👈 coloque sua senha aqui
+            st.session_state.autenticado = True
+            st.rerun()
+        elif senha:
+            st.error("Senha incorreta")
+
+        st.stop()
+
+check_login()
 
 # === Remove SOMENTE banners internos de status do Streamlit (deprecation) ===
 HIDE_STREAMLIT_STATUS = """
