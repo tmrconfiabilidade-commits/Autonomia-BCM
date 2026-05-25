@@ -42,7 +42,7 @@ def check_login():
 
         senha = st.text_input("Digite a senha", type="password")
 
-        if senha == "1234":  # 👈 coloque sua senha aqui
+        if senha == "@Mobile234":  # 👈 coloque sua senha aqui
             st.session_state.autenticado = True
             st.rerun()
         elif senha:
