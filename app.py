@@ -28,7 +28,7 @@ footer {visibility: hidden;}
 [data-testid="stStatusWidget"] {display: none;}
 [data-testid="stDecoration"] {display: none;}
 [data-testid="stToolbar"] {display: none;}
-
+section[data-testid="stFooter"] {display: none !important;}
 .block-container {
     padding-top: 1rem;
 }
